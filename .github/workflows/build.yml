@@ -1,0 +1,53 @@
+name: build-apk
+
+# 推 main 校验代码，打 v* 标签自动出包并挂到 Release，
+# 也可以在 Actions 页面手动点 Run workflow
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.7'
+          channel: stable
+          cache: true
+
+      - name: 拉取依赖
+        run: flutter pub get
+
+      - name: 静态分析
+        run: flutter analyze --no-fatal-infos
+
+      - name: 单元测试
+        run: flutter test
+
+      # 仓库里没有 key.properties 时 gradle 会回退到 debug 签名，
+      # 因此这里能直接出可安装的 release 包（CI 产物不用于商店上架）
+      - name: 构建双 ABI APK
+        run: flutter build apk --release
+
+      - name: 上传构建产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: chengtv-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
+
+      - name: 标签构建时挂到 Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/app/outputs/flutter-apk/app-release.apk
+          generate_release_notes: true
