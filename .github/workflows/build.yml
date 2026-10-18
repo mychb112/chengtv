@@ -8,6 +8,11 @@ on:
     tags: ['v*']
   workflow_dispatch:
 
+# 发布 Release 需要写权限；仓库设置里 Actions 也必须是
+# Settings → Actions → General → Workflow permissions → Read and write
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
