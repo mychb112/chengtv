@@ -1,8 +1,26 @@
-# 电视（ChengTV）
+<p align="center">
+  <img src="docs/images/icon.png" width="120" alt="电视图标">
+</p>
+
+<h1 align="center">电视（ChengTV）</h1>
+
+<p align="center">
+  <a href="https://github.com/mychb112/chengtv/releases/latest"><img src="https://img.shields.io/github/v/release/mychb112/chengtv?label=%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC&color=2ea44f" alt="最新版本"></a>
+  <img src="https://img.shields.io/github/downloads/mychb112/chengtv/total?label=%E4%B8%8B%E8%BD%BD%E6%AC%A1%E6%95%B0&color=2ea44f" alt="下载次数">
+  <img src="https://img.shields.io/badge/Android-7.0%2B-3DDC84?logo=android&logoColor=white" alt="Android 7.0+">
+</p>
 
 自己写的安卓电视直播播放器。手机、平板、电视盒子/智能电视通用，同一套交互同时支持触屏和遥控器。
 
 **本应用不内置任何直播源。** 频道内容由你导入自己的 M3U / M3U8 播放列表，播放什么完全取决于你的源。
+
+## 界面预览
+
+| 直播播放 | 频道列表 | 节目单 / 回看 |
+| :---: | :---: | :---: |
+| <img src="docs/images/screen-player.png" width="290"> | <img src="docs/images/screen-channels.png" width="290"> | <img src="docs/images/screen-epg.png" width="290"> |
+
+截图都放在 `docs/images/`，用同名文件覆盖即可更新；新增图片的写法见 [docs/images/README.md](docs/images/README.md)。
 
 ## 构建产物
 
