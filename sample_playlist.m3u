@@ -1,0 +1,7 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="test1" tvg-name="测试频道 · HLS" tvg-logo="" group-title="测试源",测试频道 · HLS
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+#EXTINF:-1 tvg-id="test2" tvg-name="测试频道 · 低延迟" tvg-logo="" group-title="测试源",测试频道 · 低延迟
+https://test-streams.mux.dev/pts_shift/master.m3u8
+#EXTINF:-1 tvg-id="test3" tvg-name="示例频道 · 苹果测试流" tvg-logo="" group-title="示例",示例频道 · 苹果测试流
+https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8

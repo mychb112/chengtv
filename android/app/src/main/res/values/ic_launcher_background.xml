@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 自适应图标的底色：与拟物电视图标底板的暖黑一致 -->
+    <color name="ic_launcher_background">#1E1713</color>
+</resources>
