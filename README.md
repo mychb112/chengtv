@@ -200,6 +200,3 @@ lib/
   ui/widgets/channel_card.dart  频道卡片（焦点动画）
 ```
 
-### 本机构建环境备注
-
-Gradle 全局配置 `S:\Caches\gradle\init.d\mirrors.gradle` 里的 aliyun 镜像注入已加 `gradle.parent == null` 判断，避免与 Flutter 自带构建插件的 `FAIL_ON_PROJECT_REPOS` 冲突。原文件备份在 `mirrors.gradle.bak`。
