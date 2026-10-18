@@ -33,10 +33,10 @@
 当前版本 **1.15.0 (build 15)**，版本号由系统 `PackageManager` 读取，界面显示与安装包内一致。
 
 直播源与节目单订阅可参考
-直播信号源
-https://github.com/Guovin/iptv-api/releases/download/playlist-latest/result.m3u
-节目单订阅源 
-http://epg.51zmt.top:8000/e.xml.gz
+- 直播信号源
+- https://github.com/Guovin/iptv-api/releases/download/playlist-latest/result.m3u
+- 节目单订阅源 
+- http://epg.51zmt.top:8000/e.xml.gz
 
 
 ## 版本记录
